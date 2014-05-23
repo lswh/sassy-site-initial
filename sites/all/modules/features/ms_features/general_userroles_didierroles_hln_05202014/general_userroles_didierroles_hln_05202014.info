@@ -1,0 +1,16 @@
+name = general_userroles_didierroles_hln_05202014
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = general_userroles_didierroles_hln_05202014
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = administrator
+features[user_role][] = bartender
+features[user_role][] = dancer
+features[user_role][] = dj
+features[user_role][] = event organizer
+features[user_role][] = model
+features[user_role][] = stripper
+features[user_role][] = usher
+features[user_role][] = writer contributor

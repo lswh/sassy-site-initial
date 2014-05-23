@@ -1,0 +1,12 @@
+name = profiles_views_recentlyplayedentityref_hln_05202014
+description = recently played at for DJ profile
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = profiles_views_recentlyplayedentityref_hln_05202014
+dependencies[] = entityreference
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = profiles_dj_recentlyplayedat
+features_exclude[dependencies][ctools] = ctools

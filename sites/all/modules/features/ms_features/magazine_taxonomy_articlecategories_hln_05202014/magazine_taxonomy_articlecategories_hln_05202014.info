@@ -1,0 +1,9 @@
+name = magazine_taxonomy_articlecategories_hln_05202014
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = magazine_taxonomy_articlecategories_hln_05202014
+features[features_api][] = api:2
+features[taxonomy][] = article_categories
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][taxonomy] = taxonomy

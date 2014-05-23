@@ -1,0 +1,9 @@
+name = general_imagestyles_eventthumbs_hln_05202014
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = general_imagestyles_eventthumbs_hln_05202014
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = event_flyer
+features[image][] = portrait_180_255

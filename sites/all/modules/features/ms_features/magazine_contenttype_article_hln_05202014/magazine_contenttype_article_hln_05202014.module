@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the magazine_contenttype_article_hln_05202014 feature.
+ */
+
+include_once 'magazine_contenttype_article_hln_05202014.features.inc';

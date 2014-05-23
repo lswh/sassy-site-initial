@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the magazine_views_articlesbycategory feature.
+ */
+
+include_once 'magazine_views_articlesbycategory.features.inc';

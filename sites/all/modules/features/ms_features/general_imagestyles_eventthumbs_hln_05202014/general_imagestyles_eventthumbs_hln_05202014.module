@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the general_imagestyles_eventthumbs_hln_05202014 feature.
+ */
+
+include_once 'general_imagestyles_eventthumbs_hln_05202014.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the events_view_calendar_04032014 feature.
+ */
+
+include_once 'events_view_calendar_04032014.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the events_views_popupanduserreferences_hln_05162014 feature.
+ */
+
+include_once 'events_views_popupanduserreferences_hln_05162014.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the general_openlayers_overallmapview_hln_05202014 feature.
+ */
+
+include_once 'general_openlayers_overallmapview_hln_05202014.features.inc';
