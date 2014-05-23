@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the slideshow_contenttype_GalleryEvolveDemo_05232014 feature.
+ */
+
+include_once 'slideshow_contenttype_galleryevolvedemo_05232014.features.inc';

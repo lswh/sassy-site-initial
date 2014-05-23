@@ -1,0 +1,12 @@
+name = slideshow_contenttype_GalleryEvolveDemo_05232014
+description = demo of Gallery from Evolve Theme full installation
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = slideshow_contenttype_galleryevolvedemo_05232014
+dependencies[] = features
+dependencies[] = image
+features[features_api][] = api:2
+features[field_base][] = field_gallery_images
+features[field_instance][] = node-gallery-field_gallery_images
+features[node][] = gallery
