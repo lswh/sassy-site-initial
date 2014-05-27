@@ -19,7 +19,10 @@
       <div class="clearfix"></div>
 	    <p><?php print render($content['field_event_date']); ?></p>
       <p><?php print render($content['field_price']); ?></p>
+<<<<<<< HEAD
       <p><?php print render($content['field_promotion']); ?></p>
+=======
+>>>>>>> fe46cb097c64a66c26a6d16003a9754ee5df2260
       <p><?php print render($content['field_music']); ?></p>
       <p><?php print render($content['field_dj']); ?></p>
       <p><?php print render($content['field_event_organizer']); ?></p>
