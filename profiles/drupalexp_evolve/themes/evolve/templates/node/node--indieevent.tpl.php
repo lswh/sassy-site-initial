@@ -12,7 +12,7 @@ dsm($content);
     <div class="portfolio-image col-md-5">
       <span class="brd-headling"></span>
       <div class="clearfix"></div>
-	  <p><?php print render($content['field_event_date']]); ?></p>
+	  <p><?php print render($content['field_event_date']); ?></p>
       <p><?php print render($content['body']); ?></p>
       <h3 class="headline"><?php print t('Project Details');?></h3>
       <span class="brd-headling"></span>
