@@ -3,10 +3,11 @@
     <?php
 // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
-    hide($content['links']);    
+    hide($content['links']);
+dsm($$content['field_add_image']);    
     ?>
     <div class="portfolio-image col-md-7">
-      <?php print render($content['field_portfolio_images']); ?>
+      <?php print render($content['field_add_image']); ?>
     </div>
     <div class="portfolio-image col-md-5">
       <h3 class="headline"><?php print t('Job Description');?></h3>
