@@ -1,18 +1,19 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix row"<?php print $attributes; ?>>
-  <div class="content<"<?php print $content_attributes; ?>>
+  <div class="content"<?php print $content_attributes; ?>>
     <?php
 // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
-dsm($content);    
+//dsm($content);    
     ?>
     <div class="portfolio-image col-md-7">
-      <?php  print render($content['field_add_image']); ?>
+      <?php 
+	  print render($content['field_add_image']); ?>
     </div>
     <div class="portfolio-image col-md-5">
+      <h3 class="headline"><?php print t('Job Description');?></h3>
       <span class="brd-headling"></span>
       <div class="clearfix"></div>
-	  <p><?php print render($content['field_event_date']]); ?></p>
       <p><?php print render($content['body']); ?></p>
       <h3 class="headline"><?php print t('Project Details');?></h3>
       <span class="brd-headling"></span>
@@ -23,4 +24,3 @@ dsm($content);
     </div>
   </div>
 </div> 
-
