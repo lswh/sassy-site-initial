@@ -12,9 +12,10 @@
 
     hide($content['links']);
 
-    dsm($content);    
+    dsm($content['field_add_image']);    
 
     ?>
+	
 
     <div class="portfolio-image col-md-7">
 
