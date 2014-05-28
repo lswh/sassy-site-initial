@@ -42,7 +42,7 @@
       <p><i class="fa fa-clock-o"></i><?php print render($content['field_event_date']); ?></p>
       <hr />
 
-      <i class="fa fa-star"></i><p style="text-align:right;float:right;"><?php print render($content['field_price']); ?></p>
+      <i class="fa fa-star"></i><p><?php print render($content['field_price']); ?></p>
       <hr />
 
       <p><i class="fa fa-glass"></i><?php print render($content['field_promotion']); ?></p>
