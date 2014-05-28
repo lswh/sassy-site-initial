@@ -81,6 +81,7 @@ lessc[] = lessc/block.less
 lessc[] = lessc/bxslider.less
 lessc[] = lessc/shortcode.less
 lessc[] = lessc/quicksettings.less
+stylesheets[all][] = assets/css/customstyle.css
 
 
 scripts[] = assets/scripts/evolve.js
