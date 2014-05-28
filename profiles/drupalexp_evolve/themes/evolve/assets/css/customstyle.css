@@ -9,5 +9,7 @@ float:left; margin-right:5px;
 
 /******** to be moved to style.css *******/
 /*BEGIN INDIE EVENT FORM CUSTOM CSS*/
-
+html.js input.form-autocomplete {
+background-position: 100% 20px !important;
+}
 /*END INDIE EVENT FORM CUSTOM CSS*/
