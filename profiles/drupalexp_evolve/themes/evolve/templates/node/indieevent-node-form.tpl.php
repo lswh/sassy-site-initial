@@ -29,12 +29,12 @@ dpm($form);
       <p><i class="fa fa-map-marker"></i><?php print render($form['field_venue']); ?></p>
       <hr />
       <span class="brd-headling"></span>
-      <div class="clearfix"></div>      <?php print render($form['field_portfolio_categories']);?>
+      <div class="clearfix"></div><?php print render($form['field_portfolio_categories']);?>
       <div class="clearfix"></div>
       <?php print render($form['field_portfolio_url']);?>
     </div>
     <div  class="clearfix"></div>
-    <div class="portfolio-image col-md-11"><?php render_drupal_children($form); ?></div>
+    <div class="portfolio-image col-md-11"><?php print render($form['submit']);?></div>
 
 
   </div>
