@@ -39,7 +39,7 @@
 
       <div  class="clearfix"></div>
 
-      <p><i class="fa fa-clock-o"><?php print render($content['field_event_date']); ?></p></i>
+      <p><i class="fa fa-clock-o"></i><?php print render($content['field_event_date']); ?></p>
       <hr />
 
       <i class="fa fa-star"></i><p style="text-align:right;float:right;"><?php print render($content['field_price']); ?></p>
