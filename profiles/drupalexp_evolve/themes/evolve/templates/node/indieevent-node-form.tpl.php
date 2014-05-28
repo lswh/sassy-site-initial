@@ -34,6 +34,7 @@ dpm($form);
       <?php print render($form['field_portfolio_url']);?>
     </div>
     <div  class="clearfix"></div>
+    <div class="portfolio-image col-md-11"><?php render_drupal_children($form); ?></div>
 
 
   </div>
