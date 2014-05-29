@@ -11,5 +11,12 @@ float:left; margin-right:5px;
 /*BEGIN INDIE EVENT FORM CUSTOM CSS*/
 html.js input.form-autocomplete {
 background-position: 100% 20px !important;
+size: 40;
+}
+
+.form-text {
+	size: 40;
 }
 /*END INDIE EVENT FORM CUSTOM CSS*/
+
+
