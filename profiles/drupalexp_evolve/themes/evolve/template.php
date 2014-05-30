@@ -3,6 +3,9 @@
 * Implements hook_form_alter().
 */
 function evolve_form_indieevent_node_form_alter(&$form, &$form_state, $form_id) {
+    if($form_id == ''){
+    $form['field_price']['#language']['#size'] = '30';
+  }
 
 }
 
