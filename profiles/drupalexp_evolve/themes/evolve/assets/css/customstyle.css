@@ -1,4 +1,3 @@
-/******** to be moved to style.css *******/
 /*BEGIN align icon on event view*/
 
 .portfolio-image .fa{line-height:24px !important;
@@ -22,4 +21,21 @@ size: 40;
 >>>>>>> 9c75137b9d6f5129258e79ed949c389adc576360
 /*END INDIE EVENT FORM CUSTOM CSS*/
 
+/* Justifyyyyy */
 
+p {
+text-align: justify;
+}
+
+/* End of Justify */
+
+
+/* Begin of Button for filter */
+#edit-field-music-tid-50 a{
+border: 2px solid black;
+} 
+.selected2{color:black;}
+.trest{color:blue;}
+
+.form-type-bef-link{border:1px solid gray;}
+/* End of Button for filter */

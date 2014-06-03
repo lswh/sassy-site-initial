@@ -52,7 +52,8 @@
 
       <p><i class="fa fa-map-marker"></i><?php print render($content['field_venue']); ?></p>
       <hr />
-
+    <p><?php print render($content['field_event_type']); ?></p>
+    <hr />
      </div>
 	 
 	 
@@ -77,8 +78,7 @@
     <p><?php print render($content['body']); ?></p>
     <hr />
 
-    <p><?php print render($content['field_event_type']); ?></p>
-    <hr />
+
 
     <p><?php print render($content['field_tags']); ?></p>
     <hr />
