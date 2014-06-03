@@ -75,6 +75,16 @@
       <hr />
 	  
     <p><?php print render($content['body']); ?></p>
+    <hr />
+
+    <p><?php print render($content['field_event_type']); ?></p>
+    <hr />
+
+    <p><?php print render($content['field_tags']); ?></p>
+    <hr />
+
+    <p><?php print render($content['field_is_this_a_private_event_']); ?></p>
+    <hr />
     </div>
 
 
