@@ -72,3 +72,43 @@ function evolve_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__' . $node->type . '__' . $vars['view_mode'].'__'.$view->current_display;    
   }
 }
+
+/**
+ * Implements hook_fieldset().
+ */
+function evolve_fieldset($variables) {
+dsm($variables);
+//$variables['element']['#title']['#attributes']['class'][13]= 'glyphicon glyphicon-music';
+
+switch($variables['element']['#title']){
+	case "Music":
+		$variables['element']['#attributes']['class'][10]= 'glyphicon glyphicon-music';
+		break;
+	case 'City':
+		$variables['element']['#attributes']['class'][11]= 'glyphicon glyphicon-map-marker';
+		break;
+	case 'Event Type':
+		$variables['element']['#attributes']['class'][12]= 'glyphicon glyphicon-screenshot';
+		break;
+}
+  $element = $variables['element'];
+  element_set_attributes($element, array('id'));
+  _form_set_class($element, array('form-wrapper'));
+
+  $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
+  if (!empty($element['#title'])) {
+    // Always wrap fieldset legends in a SPAN for CSS positioning.
+    $output .= '<legend><span class="fieldset-legend">' . $element['#title'] . '</span></legend>';
+  }
+  $output .= '<div class="fieldset-wrapper">';
+  if (!empty($element['#description'])) {
+    $output .= '<div class="fieldset-description">' . $element['#description'] . '</div>';
+  }
+  $output .= $element['#children'];
+  if (isset($element['#value'])) {
+    $output .= $element['#value'];
+  }
+  $output .= '</div>';
+  $output .= "</fieldset>\n";
+  return $output;
+}
