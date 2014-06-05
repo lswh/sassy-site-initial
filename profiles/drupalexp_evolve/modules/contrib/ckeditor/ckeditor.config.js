@@ -37,8 +37,8 @@ CKEDITOR.editorConfig = function(config) {
   /**
     * Sample extraCss code for the "marinelli" theme.
     */
-  if (Drupal.settings.ckeditor.theme == "marinelli") {
-    config.extraCss += "body{background:#FFF;text-align:left;font-size:0.8em;}";
+  if (Drupal.settings.ckeditor.theme == "evolve") {
+    config.extraCss += "body{background:#FFF;text-align:JustifyBlock;font-size:0.8em;}";
     config.extraCss += "#primary ol, #primary ul{margin:10px 0 10px 25px;}";
   }
   if (Drupal.settings.ckeditor.theme == "newsflash") {
