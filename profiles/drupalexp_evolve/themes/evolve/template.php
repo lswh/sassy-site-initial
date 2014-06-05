@@ -74,10 +74,22 @@ function evolve_preprocess_node(&$vars) {
 }
 
 /**
+ * Implements hook_link().
+ */
+function evolve_link($variables) {
+//if($variables['options']['attributes']['title'] == 'Music'){
+dsm($variables);
+//}
+
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
+}
+
+
+/**
  * Implements hook_fieldset().
  */
 function evolve_fieldset($variables) {
-dsm($variables);
+//dsm($variables);
 //$variables['element']['#title']['#attributes']['class'][13]= 'glyphicon glyphicon-music';
 
 switch($variables['element']['#title']){

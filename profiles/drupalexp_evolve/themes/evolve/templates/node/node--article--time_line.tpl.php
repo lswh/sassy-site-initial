@@ -89,9 +89,6 @@
     <?php print render($content['field_media']);?>
     <div class="mediahover"></div>
     <div class="portfolio-image-zoom">
-      <a href="<?php print $node_url;?>">
-        <span class="fa fa-link"></span>
-      </a>
     </div>
   </div>
 </div>
