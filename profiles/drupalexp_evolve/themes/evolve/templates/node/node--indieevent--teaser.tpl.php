@@ -7,6 +7,7 @@
     ?>
     <div class="portfolio-image">
       <?php print render($content['field_portfolio_images'][0]); ?>
+      <?php print render($content['field_event_date'][0]); ?>
       <div class="mediaholder"></div>
       <div class="portfolio-image-zoom">
         <a href="<?php print $node_url;?>"><span class="fa fa-link"></span></a>

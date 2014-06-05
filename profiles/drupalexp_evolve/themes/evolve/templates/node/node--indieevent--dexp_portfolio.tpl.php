@@ -27,8 +27,10 @@
       </div>
     </div>
     <div class="item-description">
-      <h5><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h5>
-      <div class="description"><?php print render($content['body']);?></div>
+      <center><h5><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h5></center>
+      <div class="description"><?php print render($content['field_event_date']); ?><?php print render($content['field_venue']); ?><?php print render($content['body']);?>
+      
+      </div>
     </div>
   </div>
 </div> 

@@ -73,17 +73,6 @@ function evolve_preprocess_node(&$vars) {
   }
 }
 
-/**
- * Implements hook_link().
- */
-function evolve_link($variables) {
-//if($variables['options']['attributes']['title'] == 'Music'){
-dsm($variables);
-//}
-
-  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
-}
-
 
 /**
  * Implements hook_fieldset().
@@ -110,7 +99,7 @@ switch($variables['element']['#title']){
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<legend><span class="fieldset-legend">' . $element['#title'] . '</span></legend>';
+    $output .= '<legend><span class="fieldset-legend"><i class="icon-headphones icon-transparent"></i>' . $element['#title'] . '</span></legend>';
   }
   $output .= '<div class="fieldset-wrapper">';
   if (!empty($element['#description'])) {
