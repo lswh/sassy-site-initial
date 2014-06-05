@@ -81,25 +81,27 @@ function evolve_fieldset($variables) {
 //dsm($variables);
 //$variables['element']['#title']['#attributes']['class'][13]= 'glyphicon glyphicon-music';
 
-switch($variables['element']['#title']){
-	case "Music":
-		$variables['element']['#attributes']['class'][10]= 'glyphicon glyphicon-music';
-		break;
-	case 'City':
-		$variables['element']['#attributes']['class'][11]= 'glyphicon glyphicon-map-marker';
-		break;
-	case 'Event Type':
-		$variables['element']['#attributes']['class'][12]= 'glyphicon glyphicon-screenshot';
-		break;
-}
   $element = $variables['element'];
   element_set_attributes($element, array('id'));
   _form_set_class($element, array('form-wrapper'));
 
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
-    // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<legend><span class="fieldset-legend"><i class="icon-headphones icon-transparent"></i>' . $element['#title'] . '</span></legend>';
+    // Always wrap fieldset legends in a SPAN for CSS positioning.	
+	
+	switch($variables['element']['#title']){
+		case "Music":
+			$output .= '<legend><span class="fieldset-legend"><span id="iconMusic" class="glyphicon glyphicon-music">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			break;
+		case 'City':
+			$output .= '<legend><span class="fieldset-legend"><span id="iconCity" class="glyphicon glyphicon-map-marker">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			break;
+	case 'Event Type':
+			$output .= '<legend><span class="fieldset-legend"><span id="iconType" class="glyphicon glyphicon-fire">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			break;
+	default:
+		$output .= '<legend><span class="fieldset-legend"><span id="iconMusic" class="glyphicon glyphicon-music">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+	}
   }
   $output .= '<div class="fieldset-wrapper">';
   if (!empty($element['#description'])) {

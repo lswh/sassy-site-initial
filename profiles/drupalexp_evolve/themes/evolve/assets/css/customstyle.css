@@ -135,6 +135,21 @@ display:inline-block;
 div.views-exposed-form div.views-exposed-widgets{
 float:right;
 }
+fieldset.collapsible .fieldset-legend {
+/*display: inline;*/
+}
+#iconMusic.glyphicon,
+#iconCity.glyphicon,
+#iconType.glyphicon
+{
+padding-right:5px;
+}
+#edit-field-music-tid-wrapper fieldset.collapsed .fieldset-legend,
+#edit-field-music-tid-wrapper fieldset.collapsible .fieldset-legend {
+background-image: none;
+}
+
+
 
 /*
 ul.bef-tree-child li{
