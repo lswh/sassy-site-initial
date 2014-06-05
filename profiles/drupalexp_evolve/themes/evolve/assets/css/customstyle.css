@@ -131,6 +131,17 @@ position:absolute;
 display:inline-block;
 }
 
+span.fieldset-legend{
+/*visibility: hidden;*/
+}
+.view-filters{
+border:2px solid red;
+height: 200px;
+}
 
+
+ul.bef-tree-child li{
+display: inline-block;
+}
 
 /* End of Button for filter */

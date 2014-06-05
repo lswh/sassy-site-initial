@@ -20,6 +20,7 @@ dpm($form);
       <span class="brd-headling"></span>
       <div  class="clearfix"></div>
       <p><?php  print render($form['field_add_image']); ?></p>
+      <p><hr/>
       <p><i class="fa fa-music"></i><?php print render($form['field_music']); ?></p>
       <hr />
 	    <i class="fa fa-clock-o"></i><p><?php print render($form['field_event_date']); ?></p>
