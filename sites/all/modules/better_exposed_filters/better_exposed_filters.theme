@@ -413,7 +413,7 @@ function theme_select_as_tree($vars) {
   // Add exposed filter description.
   $description = '';
   if (!empty($element['#bef_description'])) {
-    $description = '<div class="description">' . $element['#bef_description'] . '</div>';
+    $description = '<div id="TESTTTTTTY" class="description">' . $element['#bef_description'] . '</div>';
   }
 
   // Add the select all/none option, if needed.
@@ -522,7 +522,7 @@ function theme_select_as_links($vars) {
       $element_set = $elem;
     }
     else {
-      $element_set[$option] = $elem;		//ICI all
+      $element_set[$option] = $elem;
     }
 
     $links = array();
@@ -534,22 +534,19 @@ function theme_select_as_links($vars) {
     if (!empty($element['#bef_path'])) {
       $path = $element['#bef_path'];
     }
-$options['attributes']['title']= 'dfsad';
-	
+
     foreach ($element_set as $key => $value) {
       $element_output = '';
       // Custom ID for each link based on the <select>'s original ID.
       $id = drupal_html_id($element['#id'] . '-' . $key);
-      
-	  $elem = array(
-		'#id' => $id,
+      $elem = array(
+        '#id' => $id,
         '#markup' => '',
         '#type' => 'bef-link',
         '#name' => $id,
-		'#class' => 'div-class',
       );
       if (array_search($key, $selected_options) === FALSE) {
-        $elem['#children'] = l($value, bef_replace_query_string_arg($name, $key, $multiple, FALSE, $path), array('attributes' => array ('class' => array('selected2'))));
+        $elem['#children'] = l($value, bef_replace_query_string_arg($name, $key, $multiple, FALSE, $path));
         //$output .= theme('form_element', array('element' => $elem));
         $element_output = theme('form_element', array('element' => $elem));
 
@@ -564,22 +561,22 @@ $options['attributes']['title']= 'dfsad';
             }
           }
         } else {
-        $elem['#children'] = l($value, bef_replace_query_string_arg($name, $key, $multiple, TRUE, $path), array('attributes' => array ('class' => array('btn'))));
+        $elem['#children'] = l($value, bef_replace_query_string_arg($name, $key, $multiple, TRUE, $path));
         _form_set_class($elem, array('bef-select-as-links-selected'));
         //$output .= str_replace('form-item', 'form-item selected', theme('form_element', array('element' => $elem)));
         $element_output = str_replace('form-item', 'form-item selected', theme('form_element', array('element' => $elem)));
       }
-      $output .= " $element_output ";
+      $output .= " $element_output ";   //ALL BUTTON
 
     }
   }
 
   $properties = array(
     '#description' => isset($element['#bef_description']) ? $element['#bef_description'] : '',
-    '#children' => $output,	//ICI ensemble
+    '#children' => $output,
   );
 
-  $output = '<div class="bef-select-as-links">';
+  $output = '<div class="bef-select-as-links">'; 				//class="collapse" TO ADD
   $output .= theme('form_element', array('element' => $properties));
   if (!empty($element['#value'])) {
     if (is_array($element['#value'])) {
@@ -591,7 +588,7 @@ $options['attributes']['title']= 'dfsad';
       $output .= '<input type="hidden" name="' . $name . '" value="' . $element['#value'] . '" />';
     }
   }
-  $output .= '</div>';
+  $output .= '</div>'; 				// ajout d'une DIV
 
   return $output;
 }
