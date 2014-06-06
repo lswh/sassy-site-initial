@@ -91,13 +91,43 @@ function evolve_fieldset($variables) {
 	
 	switch($variables['element']['#title']){
 		case "Music":
-			$output .= '<legend><span class="fieldset-legend test1"><span id="iconMusic" class="glyphicon glyphicon-music">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			$output .= 
+			'<legend>
+				<span class="fieldset-legend test1">
+					<a class="toggle-button" data-target="#div-1">
+						<span id="iconMusic" class="glyphicon glyphicon-music">'
+							. $element['#title'] . 
+							'<span class="caret"></span>
+						</span>
+					</a>
+				</span>
+			</legend>';
 			break;
 		case 'City':
-			$output .= '<legend><span class="fieldset-legend test1 "><span id="iconCity" class="glyphicon glyphicon-map-marker">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			$output .= 
+				'<legend>
+					<span class="fieldset-legend test1 ">
+						<a class="toggle-button" data-target="#div-1">
+							<span id="iconCity" class="glyphicon glyphicon-map-marker">'
+								. $element['#title'] . 
+								'<span class="caret"></span>
+							</span>
+						</a>
+					</span>
+				</legend>';
 			break;
 	case 'Event Type':
-			$output .= '<legend><span class="fieldset-legend test1"><span id="iconType" class="glyphicon glyphicon-fire">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
+			$output .= 
+				'<legend>
+					<span class="fieldset-legend test1">
+						<a class="toggle-button" data-target="#div-1">
+							<span id="iconType" class="glyphicon glyphicon-fire">' 
+								. $element['#title'] . 
+								'<span class="caret"></span>
+							</span>
+						</a>
+					</span>
+				</legend>';
 			break;
 	default:
 		$output .= '<legend><span class="fieldset-legend"><span id="iconMusic" class="glyphicon glyphicon-music">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';

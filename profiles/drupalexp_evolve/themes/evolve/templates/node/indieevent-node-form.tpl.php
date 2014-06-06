@@ -26,6 +26,7 @@ dpm($form);
 	    <i class="fa fa-clock-o"></i><p><?php print render($form['field_event_date']); ?></p>
       <hr />
       <p><i class="fa fa-headphones"></i><?php print render($form['field_dj']); ?></p>
+      <p><?php $block = module_invoke('invite', 'block_view', 'invite_add_invite_by_email'); print render($block); ?></p>
       <hr />
       <p><i class="fa fa-play-circle-o"></i><?php print render($form['field_event_organizer']); ?></p>
       <hr />
@@ -34,11 +35,13 @@ dpm($form);
       <p><?php print render($form['field_new_venue_description']); ?></p>
       <p><?php print render($form['field_event_photos']); ?></p>
       <p><?php print render($form['field_video']); ?></p>
+      <p><?php print render($form['field_invite_dj']); ?></p>
       <span class="brd-headling"></span>
       <div class="clearfix"></div>
     </div>
     <div  class="clearfix"></div>
     <div class="portfolio-image col-md-11">
+
     <center><p><?php  unset($form['field_map']); ?></p></center>
     <?php print drupal_render_children($form);?>
     </div>
