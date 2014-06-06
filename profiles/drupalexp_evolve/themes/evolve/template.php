@@ -1,13 +1,4 @@
 <?php
-/**
-* Implements hook_form_alter().
-*/
-function mytheme_form_indieevent_node_form_alter(&$form, &$form_state, $form_id) {
-    if($form_id == ''){
-    $form['field_price']['#language']['#size'] = '30';
-  }
-
-}
 
 
 /************** Custom function added by julien *******************/
