@@ -54,9 +54,21 @@ function theme_select_as_checkboxes_fieldset($vars) {
 
   // Render the checkboxes.
   $children .= theme('select_as_checkboxes', array('element' => $element));
+    $fieldset['#children'] = $children;
 
-  $fieldset['#children'] = $children;
-  return theme('fieldset', array('element' => $fieldset));
+	//////////////////MOdiff/////////////////////////////	
+	$fieldset['#mavar'] = 'totto';
+ $toto = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
+	$toto .= '<legend><span class="fieldset-legend test1"><a class="toggle-button" data-target="#div-1"><span id="iconMusic" class="glyphicon glyphicon-music">Music<span class="caret"></span></span></a></span></legend>';
+	$toto .= '<legend><span class="fieldset-legend test1 "><a class="toggle-button" data-target="#div-1">	<span id="iconCity" class="glyphicon glyphicon-map-marker">City<span class="caret"></span></span></a></span></legend>';
+	$toto .= '<legend><span class="fieldset-legend test1"><a class="toggle-button" data-target="#div-1">	<span id="iconType" class="glyphicon glyphicon-fire">Event Type<span class="caret"></span></span></a></span></legend>';
+
+  //$toto. = theme('fieldset', array('element' => $fieldset));
+dsm($toto);
+	$toto .= '</div>';
+  $toto .= "</fieldset>\n";
+  return $toto;
+  // return theme('fieldset', array('element' => $fieldset));
 }
 
 /**

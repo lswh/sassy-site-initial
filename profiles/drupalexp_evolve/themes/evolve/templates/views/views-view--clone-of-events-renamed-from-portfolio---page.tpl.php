@@ -26,7 +26,7 @@
  *
  * @ingroup views_templates
  */
- dsm($exposed);
+ //dsm($exposed);
 ?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>

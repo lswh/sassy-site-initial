@@ -85,63 +85,18 @@ function evolve_fieldset($variables) {
   element_set_attributes($element, array('id'));
   _form_set_class($element, array('form-wrapper'));
 
-  $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
-  if (!empty($element['#title'])) {
-    // Always wrap fieldset legends in a SPAN for CSS positioning.	
-	
-	switch($variables['element']['#title']){
-		case "Music":
-			$output .= 
-			'<legend>
-				<span class="fieldset-legend test1">
-					<a class="toggle-button" data-target="#div-1">
-						<span id="iconMusic" class="glyphicon glyphicon-music">'
-							. $element['#title'] . 
-							'<span class="caret"></span>
-						</span>
-					</a>
-				</span>
-			</legend>';
-			break;
-		case 'City':
-			$output .= 
-				'<legend>
-					<span class="fieldset-legend test1 ">
-						<a class="toggle-button" data-target="#div-1">
-							<span id="iconCity" class="glyphicon glyphicon-map-marker">'
-								. $element['#title'] . 
-								'<span class="caret"></span>
-							</span>
-						</a>
-					</span>
-				</legend>';
-			break;
-	case 'Event Type':
-			$output .= 
-				'<legend>
-					<span class="fieldset-legend test1">
-						<a class="toggle-button" data-target="#div-1">
-							<span id="iconType" class="glyphicon glyphicon-fire">' 
-								. $element['#title'] . 
-								'<span class="caret"></span>
-							</span>
-						</a>
-					</span>
-				</legend>';
-			break;
-	default:
-		$output .= '<legend><span class="fieldset-legend"><span id="iconMusic" class="glyphicon glyphicon-music">' . $element['#title'] . '<span class="caret"></span></span></span></legend>';
-	}
-  }
-  $output .= '<div class="fieldset-wrapper">';
-  if (!empty($element['#description'])) {
-    $output .= '<div class="fieldset-description">' . $element['#description'] . '</div>';
-  }
-  $output .= $element['#children'];
-  if (isset($element['#value'])) {
-    $output .= $element['#value'];
-  }
-  $output .= '</div>';
-  $output .= "</fieldset>\n";
-  return $output;
+   if($fieldset['#mavar'] = 'totto'){
+  $toto = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
+  
+  $toto .= '<div class="fieldset-wrapper">';
+	  if (!empty($element['#description'])) {
+		$output .= '<div class="fieldset-description">' . $element['#description'] . '</div>';
+	  }
+	  $toto .= $element['#children'];
+	  if (isset($element['#value'])) {
+		$output .= $element['#value'];
+	  }
+	  $output .= '</div>';
+	  $output .= "</fieldset>\n";
+	  return $output;
 }

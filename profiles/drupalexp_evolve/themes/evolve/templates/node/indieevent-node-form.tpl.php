@@ -26,7 +26,7 @@ dpm($form);
 	    <i class="fa fa-clock-o"></i><p><?php print render($form['field_event_date']); ?></p>
       <hr />
       <p><i class="fa fa-headphones"></i><?php print render($form['field_dj']); ?></p>
-      <p><?php $block = module_invoke('invite', 'block_view', 'invite_add_invite_by_email'); print render($block); ?></p>
+      <p class="popup-layout"><?php $block = module_invoke('invite', 'block_view', 'invite_add_invite_by_email'); print render($block); ?></p>
       <hr />
       <p><i class="fa fa-play-circle-o"></i><?php print render($form['field_event_organizer']); ?></p>
       <hr />
