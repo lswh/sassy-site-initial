@@ -95,7 +95,7 @@ a.bef-toggle {
 
 .view-filters .option:hover,
 a.fieldset-title:hover  {
-  color: #333333;
+  color: #CD2D78;
   text-decoration: none;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
@@ -138,25 +138,23 @@ float:right;
 fieldset.collapsible .fieldset-legend {
 /*display: inline;*/
 }
-#iconMusic.glyphicon,
+#iconMusic.glyphicon-music,
 #iconCity.glyphicon,
 #iconType.glyphicon
 {
 padding-right:5px;
 }
-#edit-field-music-tid-wrapper fieldset.collapsed .fieldset-legend,
-#edit-field-music-tid-wrapper fieldset.collapsible .fieldset-legend {
+html.js fieldset.collapsed  .test1,
+html.js fieldset.collapsible  .test1 {
 background-image: none;
 }
 
-
-
-/*
-ul.bef-tree-child li{
-float : left;
+div.views-exposed-form div.views-exposed-widgets {
+float: right;
+border-radius: 1px solid #cecece;
+background-color:#f1efef;
 }
-ul.bef-tree-child li div.form-item-edit-field-music-tid-50{
-display: block;
-}*/
+
+
 
 /* End of Button for filter */
