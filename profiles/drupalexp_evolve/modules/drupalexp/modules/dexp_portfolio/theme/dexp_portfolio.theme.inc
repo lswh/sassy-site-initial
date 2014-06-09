@@ -6,6 +6,8 @@
  */
 function template_preprocess_views_dexp_portfolio(&$vars) {
   //template_preprocess_views_dexp_grid($vars);
+  dsm($vars);
+  dsm($vars['view']->filter);
   $view = $vars['view'];
   $options = $view->style_plugin->options;
   $vars['options'] = $options;
@@ -22,6 +24,17 @@ function template_preprocess_views_dexp_portfolio(&$vars) {
       }
     }
     $vars['categories'] = $categories;
+	// MOn Ajout //
+	$music = array();
+    $taxonomies = taxonomy_get_tree(7);
+    foreach ($taxonomies as $tax) {
+      if ($tax->parents[0] == 0) {
+        $key = _dexp_portfolio_safe_class($tax->name);
+        $music[$key] = $tax->name;
+      }
+	 }
+	$vars['music'] = $music;
+	// /////////// //
     $js = array(
       'dexp_portfolio' => array(
         $vars['filter_id'] => $vars['view_id'],

@@ -54,21 +54,9 @@ function theme_select_as_checkboxes_fieldset($vars) {
 
   // Render the checkboxes.
   $children .= theme('select_as_checkboxes', array('element' => $element));
-    $fieldset['#children'] = $children;
 
-	//////////////////MOdiff/////////////////////////////	
-	$fieldset['#mavar'] = 'totto';
- $toto = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
-	$toto .= '<legend><span class="fieldset-legend test1"><a class="toggle-button" data-target="#div-1"><span id="iconMusic" class="glyphicon glyphicon-music">Music<span class="caret"></span></span></a></span></legend>';
-	$toto .= '<legend><span class="fieldset-legend test1 "><a class="toggle-button" data-target="#div-1">	<span id="iconCity" class="glyphicon glyphicon-map-marker">City<span class="caret"></span></span></a></span></legend>';
-	$toto .= '<legend><span class="fieldset-legend test1"><a class="toggle-button" data-target="#div-1">	<span id="iconType" class="glyphicon glyphicon-fire">Event Type<span class="caret"></span></span></a></span></legend>';
-
-  //$toto. = theme('fieldset', array('element' => $fieldset));
-dsm($toto);
-	$toto .= '</div>';
-  $toto .= "</fieldset>\n";
-  return $toto;
-  // return theme('fieldset', array('element' => $fieldset));
+  $fieldset['#children'] = $children;
+  return theme('fieldset', array('element' => $fieldset));
 }
 
 /**
@@ -425,7 +413,7 @@ function theme_select_as_tree($vars) {
   // Add exposed filter description.
   $description = '';
   if (!empty($element['#bef_description'])) {
-    $description = '<div id="TESTTTTTTY" class="description">' . $element['#bef_description'] . '</div>';
+    $description = '<div class="description">' . $element['#bef_description'] . '</div>';
   }
 
   // Add the select all/none option, if needed.
@@ -578,7 +566,7 @@ function theme_select_as_links($vars) {
         //$output .= str_replace('form-item', 'form-item selected', theme('form_element', array('element' => $elem)));
         $element_output = str_replace('form-item', 'form-item selected', theme('form_element', array('element' => $elem)));
       }
-      $output .= " $element_output ";   //ALL BUTTON
+      $output .= $element_output;
 
     }
   }
@@ -588,7 +576,7 @@ function theme_select_as_links($vars) {
     '#children' => $output,
   );
 
-  $output = '<div class="bef-select-as-links">'; 				//class="collapse" TO ADD
+  $output = '<div class="bef-select-as-links">';
   $output .= theme('form_element', array('element' => $properties));
   if (!empty($element['#value'])) {
     if (is_array($element['#value'])) {
@@ -600,7 +588,7 @@ function theme_select_as_links($vars) {
       $output .= '<input type="hidden" name="' . $name . '" value="' . $element['#value'] . '" />';
     }
   }
-  $output .= '</div>'; 				// ajout d'une DIV
+  $output .= '</div>';
 
   return $output;
 }

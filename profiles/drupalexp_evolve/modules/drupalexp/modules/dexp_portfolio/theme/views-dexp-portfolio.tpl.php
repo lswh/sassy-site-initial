@@ -24,6 +24,18 @@
 		</ul>
 	</div>
   <?php endif;?>
+  <?php if(isset($music)):?>
+  <div class="portfolio-filters">
+		<ul id="<?php print $filter_id;?>" class="dexp-portfolio-filter clearfix" data-option-key="filter">
+			<li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+			<?php foreach($music as $key => $c): ?>
+				<li>
+					<a href="#" data-filter="<?php echo $key; ?>"><?php echo $c; ?></a>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+  <?php endif;?>
 <?php endif;?>  
 <div id="<?php print $view_id;?>" class="dexp-grid-items row">
   <?php foreach($rows as $row):?>
