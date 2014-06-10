@@ -1,0 +1,11 @@
+
+name = "Custom LoginToboggan"
+description = "Improves and overrides the module LoginToboggan for customize the Drupal's login system."
+core = "7.x"
+
+
+stylesheets[all][] = logintoboggan.css
+
+
+
+

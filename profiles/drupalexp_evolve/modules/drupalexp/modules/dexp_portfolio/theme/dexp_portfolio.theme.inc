@@ -34,6 +34,18 @@ function template_preprocess_views_dexp_portfolio(&$vars) {
       }
 	 }
 	$vars['music'] = $music;
+	
+	
+	$city = array();
+    $taxonomies = taxonomy_get_tree(9);
+    foreach ($taxonomies as $tax) {
+      if ($tax->parents[0] == 0) {
+        $key = _dexp_portfolio_safe_class($tax->name);
+        $city[$key] = $tax->name;
+      }
+	 }
+	$vars['city'] = $city;
+	
 	// /////////// //
     $js = array(
       'dexp_portfolio' => array(

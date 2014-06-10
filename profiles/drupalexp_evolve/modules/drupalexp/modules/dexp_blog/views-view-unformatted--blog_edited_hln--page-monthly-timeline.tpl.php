@@ -1,4 +1,4 @@
-<?php if($options['unformatted_blog_edited_hln_filter']):?>
+<?php //if($options['unformatted_blog_filter']):?>
   <?php if(isset($categories)):?>
   <div class="unformatted-filters">
 		<ul id="<?php print $filter_id;?>" class="unformatted-filter clearfix" data-option-key="filter">
@@ -11,7 +11,7 @@
 		</ul>
 	</div>
   <?php endif;?>
-<?php endif;?>
+//<?php //endif;?>
 <div class="custompadding" data-padding="0">
 <div id ="tline-content">
   <div class="tline-topdate"><?php print $title;?></div>
