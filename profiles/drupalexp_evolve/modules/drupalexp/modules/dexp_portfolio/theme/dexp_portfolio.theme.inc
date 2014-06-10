@@ -24,7 +24,8 @@ function template_preprocess_views_dexp_portfolio(&$vars) {
       }
     }
     $vars['categories'] = $categories;
-	// MOn Ajout //
+	// MOn Ajout   devrait etre avec if $vars['view']->query->where[1]['conditions'][1]['value'][0] = 'indieevent'//
+	if ($vars['view']->query->where[1]['conditions'][1]['value'][0] = 'indieevent'){
 	$music = array();
     $taxonomies = taxonomy_get_tree(7);
     foreach ($taxonomies as $tax) {
@@ -45,7 +46,7 @@ function template_preprocess_views_dexp_portfolio(&$vars) {
       }
 	 }
 	$vars['city'] = $city;
-	
+	}
 	// /////////// //
     $js = array(
       'dexp_portfolio' => array(
