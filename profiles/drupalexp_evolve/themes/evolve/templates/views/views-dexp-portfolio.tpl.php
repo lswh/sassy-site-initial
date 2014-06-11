@@ -8,18 +8,7 @@
  */
 ?>
 
-<!-- ajout script pour faire apparaitre et disparaitre la liste d'option en fonction du bouton -->
-<script type="text/javascript">
-		$(function() {
-			$( '.toggle-button' ).on( 'click', function() {
-				
-				 $( '.hide-div' ).not( this.getAttribute( 'data-target' ) ).hide( 'slow' );	// cache les autres div
-				 
-				$( this.getAttribute( 'data-target' ) ).toggle( 'slow' );
-			});
-		});
-</script>
-<!-- fin script -->
+
 
 
 
@@ -42,11 +31,34 @@
 				</li>
 			<?php endforeach; ?>
 		</ul>
-	</div>
-  
+  </div>
+
+<div id ="tline-content" class="dexp-grid-items row">
+<div class="tline-topdate"><?php print $title;?></div>
+<div id="<?php print $view_id;?>">
+  <?php $count = 1; ?>
+  <?php foreach($rows as $id => $row):?>
+  <p class="<?php if ($count % 2 == 1) print 'tline-row-l'; else print 'tline-row-r';?>"><?php print $row; ?></p>
+  <?php $count++; endforeach;?>
+</div>
+</div>
+
+
 <?php else: ?>
 
- 
+ <!-- ajout script pour faire apparaitre et disparaitre la liste d'option en fonction du bouton -->
+<script type="text/javascript">
+		$(function() {
+			$( '.toggle-button' ).on( 'click', function() {
+				
+				 $( '.hide-div' ).not( this.getAttribute( 'data-target' ) ).hide( 'slow' );	// cache les autres div
+				 
+				$( this.getAttribute( 'data-target' ) ).toggle( 'slow' );
+			});
+		});
+</script>
+<!-- fin script -->
+
   <div class="portfolio-filters">
 		<ul id="<?php print $filter_id;?>" class="dexp-portfolio-filter clearfix" data-option-key="filter">
 		
@@ -107,24 +119,23 @@
 			
 			
 			
-			
-			
-			
-			
-			
-			
 		</ul>
 
 			<?php endif;?>
 			<?php endif;?>
 	</div>
 	
+<div id="<?php print $view_id;?>" class="dexp-grid-items row">
+<?php foreach($rows as $row):?>
+<?php print $row; ?>
+<?php endforeach;?>
+</div>
 	
 <?php endif;?>
 <?php endif;?>  
 <?php endif;?>  
-<div id="<?php print $view_id;?>" class="dexp-grid-items row">
-  <?php foreach($rows as $row):?>
-    <?php print $row; ?>
-  <?php endforeach;?>
-</div>
+<!--<div id="<?php //print $view_id;?>" class="dexp-grid-items row">
+  <?php //foreach($rows as $row):?>
+    <?php //print $row; ?>
+  <?php //endforeach;?>
+</div> --!>

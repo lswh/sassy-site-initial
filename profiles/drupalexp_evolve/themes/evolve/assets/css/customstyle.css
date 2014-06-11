@@ -21,14 +21,6 @@ size: 40;
 >>>>>>> 9c75137b9d6f5129258e79ed949c389adc576360
 /*END INDIE EVENT FORM CUSTOM CSS*/
 
-/* Justifyyyyy */
-
-p {
-text-align: justify;
-}
-
-/* End of Justify */
-
 
 /* Begin of Button for filter */
 
@@ -159,4 +151,34 @@ background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e
 /* End of Logintoboggan */
 
 
+/* Timeline */
+#tline-content {
+  background: url("../images/bg-timeline.png") repeat-y scroll center center rgba(0,0,0,0);
+  margin: 0 auto;
+  overflow: visible; 
+}
 
+  .tline-box {
+  border: 1px solid #ECEEF0;
+  border-radius: 2px;
+  margin-top: 20px;
+  min-height: 160px;
+  padding: 10px 10px 20px;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s;
+  width: 500px;
+  margin: 20px 26px 20px 26px;
+}
+.tline-box.rgtline {
+  clear: right;
+  float: right;
+  margin-top: 53px;
+  right: 0;
+}
+.pin-box,
+.tline-box {
+  background: none repeat scroll 0 0 #FFFFFF;
+  display: block;
+  float: left;
+}
+/*end of Timeline override */
