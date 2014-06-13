@@ -123,7 +123,7 @@ function evolve_lt_unified_login_page($variables) {
   $output .= '<div class="toboggan-unified ' . $active_form . '">';
 
   // Create the initial message and links that people can click on.
-  $output .= '<div id="login-message"><img src="http://qbservices.net/wp-content/uploads/2013/05/denied.gif"> ' . t('Sorry. You do not have permission to access this page. Please login to access this page or return to the homepage.') . '</div>';
+  $output .= '<div id="login-message"><img src="/assets/images/denied3.png"> ' . t('Sorry. You do not have permission to access this page. Please login to access this page or return to the homepage.') . '</div>';
   $output .= '<div id="login-links">';
   $output .= l(t('I have an account'), 'user/login', array('attributes' => array('class' => array('login-link'), 'id' => 'login-link')));
   $output .= ' ';
