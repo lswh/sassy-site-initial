@@ -143,6 +143,9 @@ function evolve_lt_unified_login_page($variables) {
 
 //MODIF
 
-function phptemplate_customerror($error_code = 404, $content = NULL) {
-return _phptemplate_callback('customerror', array('error_code' => $error_code, 'content' => $content));
+function evolve_preprocess_page(&$variables) {    
+  $status = drupal_get_http_header("status");  
+  if($status == "404 Not Found") {      
+    $variables['theme_hook_suggestions'][] = 'page__404';
+  }
 }

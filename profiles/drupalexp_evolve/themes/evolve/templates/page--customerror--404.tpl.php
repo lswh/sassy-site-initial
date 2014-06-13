@@ -1,17 +1,7 @@
-<div id="page-wrapper">
-      <header>
-     
-		  <div id="logo"> </div>
-			<!-- logo-->
-			<?php if ($logo): ?>
-			<a href="<?php print $base_path; ?>" title="<?php print t('Click to return to the Homepage'); ?>" />
-			<img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-			<?php endif; ?>
-		  </div>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix row"<?php print $attributes; ?>>
 
-
-		   <?php print render($page['header']); ?>
-	</header>
+  <div class="content<"<?php print $content_attributes; ?>>
+    
 
 	
 	<div id="404-message" class="row">
@@ -25,6 +15,7 @@
 		</div>
 	</div>';
 
+</div>
 <?php
 	//$theme = drupalexp_get_theme();
 	//print $theme->pageRender();
