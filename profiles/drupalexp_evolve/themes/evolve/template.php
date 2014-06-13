@@ -123,7 +123,7 @@ function evolve_lt_unified_login_page($variables) {
   $output .= '<div class="toboggan-unified ' . $active_form . '">';
 
   // Create the initial message and links that people can click on.
-  $output .= '<div id="login-message"><img src="/assets/images/denied3.png"> ' . t('Sorry. You do not have permission to access this page. Please login to access this page or return to the homepage.') . '</div>';
+  $output .= '<div id="login-message" class="row"><div class="span4"><img id="403_img" src="http://vps64542.ovh.net/vanille/profiles/drupalexp_evolve/themes/evolve/assets/images/denied.png" alt="..."></div> <div class="span4"> ' . t('Sorry. You do not have permission to access this page. Please login to access this page or return to the homepage.') . '</div></div>';
   $output .= '<div id="login-links">';
   $output .= l(t('I have an account'), 'user/login', array('attributes' => array('class' => array('login-link'), 'id' => 'login-link')));
   $output .= ' ';
@@ -138,4 +138,11 @@ function evolve_lt_unified_login_page($variables) {
   $output .= '</div>';
 
   return $output;
+}
+
+
+//MODIF
+
+function phptemplate_customerror($error_code = 404, $content = NULL) {
+return _phptemplate_callback('customerror', array('error_code' => $error_code, 'content' => $content));
 }
