@@ -111,6 +111,7 @@
 					
 					<?php endforeach; ?>
 				</div>
+
 			</div>
 			<!-- fin div contenant les listes d'option -->
 			
