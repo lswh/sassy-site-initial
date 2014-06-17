@@ -70,6 +70,9 @@
 				<div class="btn">
 					<a  class="toggle-button glyphicon glyphicon-map-marker" data-target=".div-3"> City <span class="caret"></span> </a> 
 				</div>
+				<div class="btn">
+					<a  class="toggle-button glyphicon glyphicon-calendar"> Date <span class="caret"></span> </a> 
+				</div>
 			</div>
 			<!-- fin div contenant les boutons -->
 

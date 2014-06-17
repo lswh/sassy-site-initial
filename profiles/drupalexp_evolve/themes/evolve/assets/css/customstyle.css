@@ -160,3 +160,8 @@ background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e
 }
 
 /*end of Timeline override */
+
+/* Body Text */
+body {
+  text-align: justify;
+}
