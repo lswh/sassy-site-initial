@@ -29,12 +29,12 @@
 		</ul>
   </div>
 
-<div id ="tline-content" class="dexp-grid-items row">
+<div id ="tline-content" class="dexp-grid-items">
 <div class="tline-topdate"><?php print $title;?></div>
 <div id="<?php print $view_id;?>">
   <?php $count = 1; ?>
-  <?php foreach($rows as $id => $row):?>
-  <p class="<?php if ($count % 2 == 1) print 'tline-row-l'; else print 'tline-row-r';?>"><?php print $row; ?></p>
+  <?php foreach($rows as $row):?>
+  <?php print $row; ?></p>
   <?php $count++; endforeach;?>
 </div>
 </div>
