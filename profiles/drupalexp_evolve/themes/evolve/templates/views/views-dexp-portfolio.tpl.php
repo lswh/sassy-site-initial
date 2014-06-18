@@ -61,16 +61,16 @@
 			<!-- div contenant les boutons -->
 			<div id="Menu-Button" class="btn-group"> 
 
-				<div class="btn">
+				<div class="btn btn-small">
 					<a class="toggle-button glyphicon glyphicon-headphones" data-target=".div-1"> Music <span class="caret"></span> </a> 
 				</div>
-				<div class="btn">
+				<div class="btn btn-small">
 					<a  class="toggle-button glyphicon glyphicon-fire" data-target=".div-2"> Event <span class="caret"></span> </a> 
 				</div>
-				<div class="btn">
+				<div class="btn btn-small">
 					<a  class="toggle-button glyphicon glyphicon-map-marker" data-target=".div-3"> City <span class="caret"></span> </a> 
 				</div>
-				<div class="btn">
+				<div class="btn btn-small">
 					<a  class="toggle-button glyphicon glyphicon-calendar"> Date <span class="caret"></span> </a> 
 				</div>
 			</div>

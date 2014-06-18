@@ -49,7 +49,7 @@ border-radius: 1px solid #cecece;
 background-color:#f1efef;
 }
 */
-#Menu-Button .btn{
+#Menu-Button .btn a{
   display: inline-block;
   *display: inline;
   padding: 4px 14px;
@@ -58,7 +58,7 @@ background-color:#f1efef;
   font-size: 14px;
   line-height: 20px;
   *line-height: 20px;
-  color: #cecece;
+  color: #333333;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
@@ -85,6 +85,7 @@ background-color:#f1efef;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
 }
 
 
@@ -98,16 +99,17 @@ background-color:#f1efef;
   *background-color: #d9d9d9;
   
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #CD2D78);
-  background-image: -o-linear-gradient(top, #ffffff, #CD2D78);
-  background-image: linear-gradient(to bottom, #ffffff, #CD2D78);
-  background-image: -moz-linear-gradient(top, #ffffff, #CD2D78);
+  background-image: -webkit-linear-gradient(top, #ffffff, #cecece);
+  background-image: -o-linear-gradient(top, #ffffff, #cecece);
+  background-image: linear-gradient(to bottom, #ffffff, #cecece);
+  background-image: -moz-linear-gradient(top, #ffffff, #cecece);
   background-repeat: repeat-x;
   
 }
 
 #Menu-Button{
 float:right;
+border-radius:1px solid black;
 }
 #container{
 
@@ -128,6 +130,13 @@ border-radius:1px solid grey;
 padding:5px;
 background-color:#f5f5f5;
 }
+
+a.glyphicon-map-marker,
+a.glyphicon-fire,
+a.glyphicon-headphones{
+*	color:black;
+}
+
 
 /* End of Button for filter */
 
