@@ -6,8 +6,8 @@
  */
 function template_preprocess_views_dexp_portfolio(&$vars) {
   //template_preprocess_views_dexp_grid($vars);
-  dsm($vars);
-  dsm($vars['view']->filter);
+  //dsm($vars);
+  //dsm($vars['view']->filter);
   $view = $vars['view'];
   $options = $view->style_plugin->options;
   $vars['options'] = $options;

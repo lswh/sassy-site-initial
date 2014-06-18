@@ -29,14 +29,19 @@
 		</ul>
   </div>
 
-<div id ="tline-content" class="dexp-grid-items">
-<div class="tline-topdate"><?php print $title;?></div>
-<div id="<?php print $view_id;?>">
-  <?php $count = 1; ?>
-  <?php foreach($rows as $row):?>
-  <?php print $row; ?></p>
-  <?php $count++; endforeach;?>
-</div>
+
+<div class="custompadding2" data-padding="0">
+<div id ="tline-content">
+  <div class="tline-topdate"><?php print $title;?></div>
+  <?php
+  dsm($rows);
+  $count = 1;
+  foreach ($rows as $id => $row):?>
+    <div class="post tline-box dexp-grid-items row <?php if ($count % 2 == 0) print 'rgtline';?>">
+      <span class="<?php if ($count % 2 == 1) print 'tline-row-l'; else print 'tline-row-r';?>"></span>
+      <?php print views_embed_view('blog_edited_hln', 'block_timeline', intval(strip_tags($row))); ?>
+    </div>
+  <?php $count++;endforeach;?>
 </div>
 
 
@@ -61,24 +66,23 @@
 			<!-- div contenant les boutons -->
 			<div id="Menu-Button" class="btn-group"> 
 
-				<div class="btn btn-small">
+				<div class="bouton btn btn-small">
 					<a class="toggle-button glyphicon glyphicon-headphones" data-target=".div-1"> Music <span class="caret"></span> </a> 
 				</div>
-				<div class="btn btn-small">
+				<div class="bouton btn btn-small">
 					<a  class="toggle-button glyphicon glyphicon-fire" data-target=".div-2"> Event <span class="caret"></span> </a> 
 				</div>
-				<div class="btn btn-small">
+				<div class="bouton btn btn-small">
 					<a  class="toggle-button glyphicon glyphicon-map-marker" data-target=".div-3"> City <span class="caret"></span> </a> 
 				</div>
-				<div class="btn btn-small">
-					<a  class="toggle-button glyphicon glyphicon-calendar"> Date <span class="caret"></span> </a> 
+				<div class="bouton btn btn-small">
+					<a  class="toggle-button glyphicon glyphicon-calendar" data-target=".div-4"> Date <span class="caret"></span> </a> 
 				</div>
 			</div>
 			<!-- fin div contenant les boutons -->
-
 			
 			<!-- div contenant les listes d'option -->
-			<div id="container">
+			<div id="container" style="margin-top:5px;">
 				<div id="div-2" class="div-2 hide-div" style="display:none">
 					<li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
 					<?php foreach($categories as $key => $c): ?>
@@ -112,6 +116,11 @@
 					<?php endforeach; ?>
 				</div>
 
+				<div id="div-4" class="div-4 hide-div" style="display:none">
+					<p><?php print views_embed_view('event_calendar', 'page_1')?></p> 
+					<li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+				</div>
+
 			</div>
 			<!-- fin div contenant les listes d'option -->
 			
@@ -124,7 +133,8 @@
 			<?php endif;?>
 			<?php endif;?>
 	</div>
-	
+
+
 <div id="<?php print $view_id;?>" class="dexp-grid-items row">
 <?php foreach($rows as $row):?>
 <?php print $row; ?>
