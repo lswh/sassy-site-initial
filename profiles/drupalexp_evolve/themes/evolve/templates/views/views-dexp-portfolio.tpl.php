@@ -117,17 +117,37 @@
 				</div>
 
 				<div id="div-4" class="div-4 hide-div" style="display:none">
-					<p><?php print views_embed_view('event_calendar', 'page_1')?></p> 
-					<li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+
+<!-- Begin open form from firebug -->
+<center><form class="ctools-auto-submit-full-form ctools-auto-submit-processed jquery-once-2-processed" action="/vanille/all-events" method="get" id="views-exposed-form-portfolio-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-field-event-date-value-wrapper" class="views-exposed-widget views-widget-filter-field_event_date_value">
+                  <label for="edit-field-event-date-value">
+            Select Date          </label>
+                        <div class="views-widget">
+          <div id="edit-field-event-date-value-value-wrapper"><div id="edit-field-event-date-value-value"><div class="container-inline-date"><div class="form-item form-type-date-popup form-item-field-event-date-value-value">
+  <div id="edit-field-event-date-value-value" class="date-padding"><div class="form-item form-type-textfield form-item-field-event-date-value-value-date">
+  <label class="element-invisible" for="edit-field-event-date-value-value-datepicker-popup-0">Date </label>
+ <input id="edit-field-event-date-value-value-datepicker-popup-0" name="field_event_date_value[value][date]" value="" size="20" maxlength="30" class="form-text ctools-auto-submit-processed hasDatepicker date-popup-init" type="text">
+<div class="description"> E.g., Wednesday, June 18, 2014</div>
+</div>
+</div>
+</div>
+</div></div></div>        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input class="ctools-use-ajax ctools-auto-submit-click js-hide btn btn-primary form-submit" id="edit-submit-portfolio" name="" value="Apply" type="submit">    </div>
+          <div class="views-exposed-widget views-reset-button">
+        <input class="btn form-submit" id="edit-reset" name="op" value="Show all" type="submit">      </div>
+      </div>
+</div>
+</div></form></center>
+<!-- end open form from firebug -->
+				<li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
 				</div>
 
 			</div>
-			<!-- fin div contenant les listes d'option -->
-			
-			
-			
-			
-			
+			<!-- fin div contenant les listes d'option -->		
 		</ul>
 
 			<?php endif;?>
