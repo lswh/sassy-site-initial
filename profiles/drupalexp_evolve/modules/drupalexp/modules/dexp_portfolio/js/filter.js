@@ -32,8 +32,15 @@
               return $el.hasClass(filter);
             });
           }
-          $(this).parents('.dexp-portfolio-filter').find('a').removeClass('active');
-          $(this).addClass('active');
+		  // modifier par rapport a l original -> permet l aspect bouton selection
+		  if($(this).hasClass('active')) {
+			  $(this).removeClass('active');
+			}
+			else {
+			 $(this).addClass('active');
+			}
+          // fin
+          
           return false;
         });
         $grid.shuffle('shuffle', 'all');
