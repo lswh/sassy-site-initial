@@ -6,8 +6,8 @@
  */
 function template_preprocess_views_dexp_portfolio(&$vars) {
   //template_preprocess_views_dexp_grid($vars);
-  //dsm($vars);
-  //dsm($vars['view']->filter);
+  dsm($vars);
+  dsm($vars['view']->filter);
   $view = $vars['view'];
   $options = $view->style_plugin->options;
   $vars['options'] = $options;
@@ -47,6 +47,13 @@ function template_preprocess_views_dexp_portfolio(&$vars) {
 	 }
 	$vars['city'] = $city;
 	}
+
+  ////////date varible generate ////////////
+
+$date = date_formatter_process();
+ dsm($date);
+  $vars['date'] = $date;
+
 	// /////////// //
     $js = array(
       'dexp_portfolio' => array(

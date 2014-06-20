@@ -27,23 +27,98 @@
   ?>
 <?php endif; ?>
 
+ 
+  <div class="portfolio-filters">
+    <ul id="<?php print $filter_id;?>" class="dexp-portfolio-filter clearfix" data-option-key="filter">
+      <li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+      <?php foreach($categories as $key => $c): ?>
+        <li>
+          <a href="#" data-filter="<?php echo $key; ?>"><?php echo $c; ?></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+
+
+
  <!-- ajout script pour faire apparaitre et disparaitre la liste d'option en fonction du bouton -->
 <script type="text/javascript">
     $(function() {
       $( '.toggle-button' ).on( 'click', function() {
         
-         //$( '.hide-div' ).not( this.getAttribute( 'data-target' ) ).hide( 2500 ); // cache les autres div
+         $( '.hide-div' ).not( this.getAttribute( 'data-target' ) ).hide( 'slow' ); // cache les autres div
          
-        $( this.getAttribute( 'data-target' ) ).toggle( 1000 );
+        $( this.getAttribute( 'data-target' ) ).toggle( 'slow' );
       });
     });
 </script>
 <!-- fin script -->
 
+<div class="portfolio-filters">
+    <ul id="<?php print $filter_id;?>" class="dexp-portfolio-filter clearfix" data-option-key="filter">
+    
+      <!-- div contenant les boutons -->
+      <div id="Menu-Button" class="btn-group"> 
 
-<div class="bouton btn btn-small">
-<a  class="toggle-button glyphicon glyphicon-calendar" data-target=".div-4"> Date <span class="caret"></span> </a>
-</div>
+        <div class="bouton btn btn-small">
+          <a class="toggle-button glyphicon glyphicon-headphones" data-target=".div-1"> Music <span class="caret"></span> </a> 
+        </div>
+        <div class="bouton btn btn-small">
+          <a  class="toggle-button glyphicon glyphicon-fire" data-target=".div-2"> Event <span class="caret"></span> </a> 
+        </div>
+        <div class="bouton btn btn-small">
+          <a  class="toggle-button glyphicon glyphicon-map-marker" data-target=".div-3"> City <span class="caret"></span> </a> 
+        </div>
+        <div class="bouton btn btn-small">
+          <a  class="toggle-button glyphicon glyphicon-calendar" data-target=".div-4"> Date <span class="caret"></span> </a>
+        </div>
+      </div>
+      <!-- fin div contenant les boutons -->
+      
+      <!-- div contenant les listes d'option -->
+      <div id="container" style="margin-top:5px;">
+        <div id="div-2" class="div-2 hide-div" style="display:none">
+          <li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+          <?php foreach($categories as $key => $c): ?>
+            <li>
+              <a href="#" data-filter="<?php echo $key; ?>"><?php echo $c; ?></a>
+            </li>
+          <?php endforeach; ?>
+        </div>
+        
+        
+        <?php if(isset($music)):?>
+        <div id="div-1" class="div-1 hide-div" style="display:none">    
+          <li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+          <?php foreach($music as $key => $c): ?>
+            <li>
+              <a href="#" data-filter="<?php echo $key; ?>"><?php echo $c; ?></a>
+            </li>
+          
+          <?php endforeach; ?>
+        </div>
+        
+        
+        <?php if(isset($city)):?>
+        <div id="div-3" class="div-3 hide-div" style="display:none">    
+          <li><a class="active" href="#" data-filter="*"><?php print t('Show All')?></a></li>
+          <?php foreach($city as $key => $c): ?>
+            <li>
+              <a href="#" data-filter="<?php echo $key; ?>"><?php echo $c; ?></a>
+            </li>
+          
+          <?php endforeach; ?>
+        </div>
+      </div>
+      <!-- fin div contenant les listes d'option -->    
+    </ul>
+
+      <?php endif;?>
+      <?php endif;?>
+  </div>
+
+
+
 
 <div id="div-4" class="div-4 hide-div views-exposed-form" style="display:none">
   <div class="views-exposed-widgets clearfix">
@@ -97,3 +172,4 @@
     <?php endif; ?>
   </div>
 </div>
+

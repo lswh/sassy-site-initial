@@ -54,6 +54,9 @@ border-radius:10px;
   background-repeat: repeat-x;
   
 }
+.portfolio-filters ul li a {
+margin: 0 0 0px;
+}
 
 #Menu-Button{
 float:right;
